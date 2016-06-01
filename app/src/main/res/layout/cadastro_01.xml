@@ -1,0 +1,184 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/relative1"
+        >
+
+    <!-- BOTAO DE FOTO DO USUARIO -->
+    <ImageButton
+        android:id="@+id/foto_btn"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_usuario"
+        android:layout_width="wrap_content"
+
+
+
+        />
+
+    <!-- RELATIVE PARA TEXTO AO LADO FOTO-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/txtamarelo"
+        android:id="@+id/relativeText1"
+
+
+        >
+
+        <!-- RELATIVE AUX TEXTO LADO FOTO-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/relativeText2">
+
+            <!-- TEXTO LADO FOTO-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/auxilio_cad"
+                android:textStyle="bold"
+                android:textColor="#435F99"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </LinearLayout>
+    <!-- LINEAR PARA FORMULARIO ABAIXO LINEAR DA FOTO E TEXTO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/relative1"
+        android:layout_marginTop="10dp"
+
+        >
+
+
+        <!-- DDD+TELEFONE -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/telefone"
+                android:hint="@string/telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="number"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- NOME COMPLETO -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/nome"
+                android:hint="@string/nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="text"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- CPF -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/cpf"
+                android:hint="@string/cpf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="number"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- SENHA -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/senha"
+                android:hint="@string/senha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="numberPassword"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- CONFIRMAR SENHA -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/conf_senha"
+                android:hint="@string/senha_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="numberPassword"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- COMO CONHECEU -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:prompt="@string/who_label"
+                android:dropDownWidth="40dp"
+                >
+
+
+            </Spinner>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- BOTAOm -->
+        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/avancar_cad_btn"
+                android:text="@string/continuar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_cinza"
+                android:textSize="20dp"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
