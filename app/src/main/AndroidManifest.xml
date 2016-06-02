@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.easyvansapp.easyvans">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_simbol"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCZVbmUisLlD4Ow4uGNnAL0umfrK7Mzzus"/>
+
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".cadastro_01"
+            android:label="@string/app_name"
+            android:parentActivityName=".cadastro_01" >
+        </activity>
+        <activity
+            android:name=".cadastro_02"
+            android:label="@string/app_name"
+            android:parentActivityName=".cadastro_02" >
+        </activity>
+    </application>
+
+</manifest>

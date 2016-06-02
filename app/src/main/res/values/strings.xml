@@ -1,0 +1,39 @@
+<resources>
+
+
+    <!-- INICIO CADASTRO -->
+    <string name="auxilio_cad">Preencha os campos abaixo para se cadastrar no sistema Easy Vans</string>
+    <string name="telephone">DDD + Telefone</string>
+    <string name="nome">Nome Completo</string>
+    <string name="cpf">CPF</string>
+    <string name="senha">Senha</string>
+    <string name="senha_confirm">Confirmar Senha</string>
+    <string name="who_label">Como conheceu o app ?</string>
+    <string-array name="who_array">
+        <item>Google</item>
+        <item>Facebook</item>
+        <item>Amigos</item>
+        <item>Eventos</item>
+        <item>Outro</item>
+    </string-array>
+    <!-- FIM CADASTRO -->
+
+    <!-- INICIO FOTO -->
+
+    <string name="msg_sucesso">Upload realizado com sucesso</string>
+    <string name="msg_falha">Falha ao enviar a foto</string>
+
+    <!-- FIM FOTO -->
+
+    <!-- INICIO GERAL -->
+
+    <string name="app_name">Easy Vans</string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="help">Central de Ajuda</string>
+    <string name="msg_failed_text_password">Senha digitada deve ser igual ao campo anterior</string>
+
+    <!-- FIM GERAL -->
+
+
+
+</resources>
