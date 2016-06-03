@@ -13,30 +13,18 @@
         android:id="@+id/relative1"
         >
 
-    <!-- BOTAO DE FOTO DO USUARIO -->
-    <ImageButton
-        android:id="@+id/foto_btn"
-        android:layout_height="wrap_content"
-        android:background="@drawable/img_usuario"
-        android:layout_width="wrap_content"
 
-
-
-        />
-
-    <!-- RELATIVE PARA TEXTO AO LADO FOTO-->
-    <RelativeLayout
+        <!-- RELATIVE PARA TEXTO AO LADO FOTO-->
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginLeft="10dp"
         android:background="@drawable/txtamarelo"
         android:id="@+id/relativeText1"
-
 
         >
 
         <!-- RELATIVE AUX TEXTO LADO FOTO-->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_margin="10dp"
@@ -54,8 +42,8 @@
                 android:gravity="center"
                 />
 
-        </RelativeLayout>
-    </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
     </LinearLayout>
     <!-- LINEAR PARA FORMULARIO ABAIXO LINEAR DA FOTO E TEXTO -->
     <LinearLayout
