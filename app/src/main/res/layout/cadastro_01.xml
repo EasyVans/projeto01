@@ -1,58 +1,54 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
     >
 
+    <!-- LINEAR TOPO -->
     <LinearLayout
-        android:id="@+id/relative1"
+        android:id="@+id/linear_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/txtamarelo"
         android:orientation="horizontal"
         >
 
 
-        <!-- RELATIVE PARA TEXTO AO LADO FOTO-->
-    <LinearLayout
-        android:id="@+id/relativeText1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/txtamarelo"
-
-        >
-
-        <!-- RELATIVE AUX TEXTO LADO FOTO-->
-        <LinearLayout
-            android:id="@+id/relativeText2"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_centerInParent="true"
-            android:layout_margin="10dp">
-
-            <!-- TEXTO LADO FOTO-->
-            <TextView
+            <!-- LINEAR 3 -->
+            <LinearLayout
+                android:id="@+id/linear_3"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:gravity="center"
-                android:text="@string/auxilio_cad"
-                android:textAlignment="center"
-                android:textColor="#435F99"
-                android:textStyle="bold"
-                />
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                >
 
+                <!-- TEXTO LADO FOTO-->
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/auxilio_cad"
+                    android:textAlignment="center"
+                    android:textColor="#435F99"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    </LinearLayout>
-    <!-- LINEAR PARA FORMULARIO ABAIXO LINEAR DA FOTO E TEXTO -->
+
+    <!-- LINEAR MEIO -->
+
     <LinearLayout
+        android:id="@+id/linear_4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/relative1"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_1"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
-
         >
 
 
@@ -67,7 +63,6 @@
                 android:layout_alignParentStart="true"
                 android:hint="@string/telephone"
                 android:inputType="number"
-
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -83,7 +78,6 @@
                 android:layout_alignParentStart="true"
                 android:hint="@string/nome"
                 android:inputType="text"
-
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -99,7 +93,6 @@
                 android:layout_alignParentStart="true"
                 android:hint="@string/cpf"
                 android:inputType="number"
-
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -115,7 +108,6 @@
                 android:layout_alignParentStart="true"
                 android:hint="@string/senha"
                 android:inputType="numberPassword"
-
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -131,41 +123,51 @@
                 android:layout_alignParentStart="true"
                 android:hint="@string/senha_confirm"
                 android:inputType="numberPassword"
-
                 />
 
         </android.support.design.widget.TextInputLayout>
 
         <!-- COMO CONHECEU -->
-        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+        <!-- <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+        <!-
+        <!-
+        <!-     <Spinner
+        <!-         android:id="@+id/spinner"
+        <!-         android:layout_width="match_parent"
+        <!-         android:layout_height="match_parent"
+        <!-         android:dropDownWidth="40dp"
+        <!-         android:prompt="@string/who_label"
+        <!-         >
+        <!-     </Spinner>
+        <!-
+        <!- </android.support.design.widget.TextInputLayout>
 
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:dropDownWidth="40dp"
-                android:prompt="@string/who_label"
-                >
+        <!- LINEAR BAIXO -->
 
+        <LinearLayout
+            android:id="@+id/linear_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linear_4"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            >
 
-            </Spinner>
+            <!-- BOTAO -->
+            <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
 
-        </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:id="@+id/avancar_cad_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/continuar"
+                    android:textSize="20dp"
 
-        <!-- BOTAO -->
-        <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+                    />
 
-            <Button
-                android:id="@+id/avancar_cad_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/continuar"
-                android:textSize="20dp"
+            </android.support.design.widget.TextInputLayout>
 
-                />
-
-        </android.support.design.widget.TextInputLayout>
-
-
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
