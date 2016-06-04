@@ -21,17 +21,16 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final int REQUEST_FOTO = 1;
     // Spinner
     private String[] states;
     private Spinner editTextWho;
-
     //Defining View
     private EditText editTextName;
     private EditText editTextCpf;
     private EditText editTextTelephone;
     private EditText editTextPassword;
     private EditText editTextConfirmPassword;
-    private static final int REQUEST_FOTO = 1;
     private Button buttonAvancar;
     private ImageButton buttonImage;
 
@@ -58,11 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextConfirmPassword = (EditText) findViewById(R.id.conf_senha);
         editTextWho = (Spinner) findViewById(R.id.spinner);
         buttonAvancar = (Button) findViewById(R.id.avancar_cad_btn);
-        buttonImage = (ImageButton) findViewById(R.id.foto_btn);
+        //buttonImage = (ImageButton) findViewById(R.id.foto_btn);
 
         // INICIALIZANDO BOTOES
         buttonAvancar.setOnClickListener(this);
-        buttonImage.setOnClickListener(this);
+        //buttonImage.setOnClickListener(this);
     }
         // CADASTRANDO USUARIO
         private void addUser(){
@@ -144,6 +143,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         new UploadArquivoTask().execute();
     }
 
+    @Override
+    public void onClick(View v) {
+        if(v == buttonAvancar){
+            String password = editTextPassword.getText().toString();
+            String confirmPassword = editTextConfirmPassword.getText().toString();
+
+            if(!password.equals(confirmPassword)){
+                editTextConfirmPassword.setError(getString(R.string.msg_failed_text_password));
+            } else{
+                enviarFoto();
+                addUser();
+                startActivity(new Intent(this, cadastro_02.class));
+            }
+
+        }
+
+        if(v == buttonImage){
+            selecionarFoto();
+        }
+
+    }
 
     class UploadArquivoTask extends AsyncTask<Void, Void, Boolean> {
 
@@ -173,28 +193,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             Toast.makeText(MainActivity.this, mensagem, Toast.LENGTH_SHORT).show();
         }
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(v == buttonAvancar){
-            String password = editTextPassword.getText().toString();
-            String confirmPassword = editTextConfirmPassword.getText().toString();
-
-            if(!password.equals(confirmPassword)){
-                editTextConfirmPassword.setError(getString(R.string.msg_failed_text_password));
-            } else{
-                enviarFoto();
-                addUser();
-                startActivity(new Intent(this, cadastro_02.class));
-            }
-
-        }
-
-        if(v == buttonImage){
-            selecionarFoto();
-        }
-
     }
 }
 

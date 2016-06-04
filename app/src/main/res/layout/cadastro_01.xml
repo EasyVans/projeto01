@@ -7,39 +7,39 @@
     >
 
     <LinearLayout
+        android:id="@+id/relative1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/relative1"
         >
 
 
         <!-- RELATIVE PARA TEXTO AO LADO FOTO-->
     <LinearLayout
+        android:id="@+id/relativeText1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/txtamarelo"
-        android:id="@+id/relativeText1"
 
         >
 
         <!-- RELATIVE AUX TEXTO LADO FOTO-->
         <LinearLayout
+            android:id="@+id/relativeText2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_margin="10dp"
             android:layout_centerInParent="true"
-            android:id="@+id/relativeText2">
+            android:layout_margin="10dp">
 
             <!-- TEXTO LADO FOTO-->
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/auxilio_cad"
-                android:textStyle="bold"
-                android:textColor="#435F99"
-                android:textAlignment="center"
                 android:gravity="center"
+                android:text="@string/auxilio_cad"
+                android:textAlignment="center"
+                android:textColor="#435F99"
+                android:textStyle="bold"
                 />
 
         </LinearLayout>
@@ -49,9 +49,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_below="@id/relative1"
         android:layout_marginTop="10dp"
+        android:orientation="vertical"
 
         >
 
@@ -61,11 +61,11 @@
 
             <EditText
                 android:id="@+id/telefone"
-                android:hint="@string/telephone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:hint="@string/telephone"
                 android:inputType="number"
 
                 />
@@ -77,11 +77,11 @@
 
             <EditText
                 android:id="@+id/nome"
-                android:hint="@string/nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:hint="@string/nome"
                 android:inputType="text"
 
                 />
@@ -93,11 +93,11 @@
 
             <EditText
                 android:id="@+id/cpf"
-                android:hint="@string/cpf"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:hint="@string/cpf"
                 android:inputType="number"
 
                 />
@@ -109,11 +109,11 @@
 
             <EditText
                 android:id="@+id/senha"
-                android:hint="@string/senha"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:hint="@string/senha"
                 android:inputType="numberPassword"
 
                 />
@@ -125,11 +125,11 @@
 
             <EditText
                 android:id="@+id/conf_senha"
-                android:hint="@string/senha_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:hint="@string/senha_confirm"
                 android:inputType="numberPassword"
 
                 />
@@ -143,8 +143,8 @@
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:prompt="@string/who_label"
                 android:dropDownWidth="40dp"
+                android:prompt="@string/who_label"
                 >
 
 
@@ -157,10 +157,9 @@
 
             <Button
                 android:id="@+id/avancar_cad_btn"
-                android:text="@string/continuar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/btn_cinza"
+                android:text="@string/continuar"
                 android:textSize="20dp"
 
                 />
