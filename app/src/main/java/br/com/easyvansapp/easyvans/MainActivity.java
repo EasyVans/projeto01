@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final int REQUEST_FOTO = 1;
     // Spinner
-    private String[] states;
-    private Spinner editTextWho;
+    //private String[] states;
+    //private Spinner editTextWho;
     //Defining View
     private EditText editTextName;
     private EditText editTextCpf;
@@ -40,13 +40,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.cadastro_01);
 
         // INICIO SPINNER
-        states = getResources().getStringArray(R.array.who_array);
-        editTextWho = (Spinner) findViewById(R.id.spinner);
+        /*states = getResources().getStringArray(R.array.who_array);
+        //editTextWho = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, states);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         editTextWho.setAdapter(dataAdapter);
 
+        */
         // FIM SPINNER
 
         // INICIALIZANDO VIEWS
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextTelephone = (EditText) findViewById(R.id.telefone);
         editTextPassword = (EditText) findViewById(R.id.senha);
         editTextConfirmPassword = (EditText) findViewById(R.id.conf_senha);
-        editTextWho = (Spinner) findViewById(R.id.spinner);
+        //editTextWho = (Spinner) findViewById(R.id.spinner);
         buttonAvancar = (Button) findViewById(R.id.avancar_cad_btn);
         //buttonImage = (ImageButton) findViewById(R.id.foto_btn);
 
